@@ -5,7 +5,11 @@ import { addMinutes } from "date-fns";
 
 export const authenticate = async (
   password: string,
-  config: { expiresInMinutes: number; expectedPassword: string },
+  config: {
+    expiresInMinutes: number;
+    expectedPassword: string;
+    orgao: "ima" | "semad" | "inea";
+  },
 ) => {
   if (password !== config.expectedPassword) {
     return "invalid-password";
@@ -15,6 +19,7 @@ export const authenticate = async (
   await db.insert(authToken).values({
     token,
     expiresAt: addMinutes(expiresAt, config.expiresInMinutes),
+    orgao: config.orgao,
   });
   return token;
 };

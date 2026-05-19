@@ -5,6 +5,10 @@ export const authToken = mysqlTable("auth_token", {
   token: varchar("token", { length: 255 }).notNull(),
   createdAt: timestamp("created_at").notNull().defaultNow(),
   expiresAt: timestamp("expires_at").notNull(),
+  orgao: varchar("orgao", {
+    length: 255,
+    enum: ["ima", "semad", "inea"],
+  }).notNull(),
 });
 
 export const clients = mysqlTable("clients", {

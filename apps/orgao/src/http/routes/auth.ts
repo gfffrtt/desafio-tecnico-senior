@@ -11,6 +11,7 @@ export const authRoutes = new Hono()
       const token = await authenticate(c.req.valid("json").password, {
         expiresInMinutes: 1,
         expectedPassword: "senha-secreta-ima",
+        orgao: "ima",
       });
       if (token === "invalid-password") {
         return c.json({ error: "Invalid password" }, 401);
@@ -25,6 +26,7 @@ export const authRoutes = new Hono()
       const token = await authenticate(c.req.valid("json").password, {
         expiresInMinutes: 5,
         expectedPassword: "senha-secreta-semad",
+        orgao: "semad",
       });
       if (token === "invalid-password") {
         return c.json({ error: "Invalid password" }, 401);
@@ -39,6 +41,7 @@ export const authRoutes = new Hono()
       const token = await authenticate(c.req.valid("json").password, {
         expiresInMinutes: 10,
         expectedPassword: "senha-secreta-inea",
+        orgao: "inea",
       });
       if (token === "invalid-password") {
         return c.json({ error: "Invalid password" }, 401);
