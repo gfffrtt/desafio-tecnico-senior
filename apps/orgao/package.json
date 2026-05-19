@@ -1,0 +1,31 @@
+{
+  "name": "@desafio-tecnico-senior/orgao",
+  "type": "module",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "tsx watch --env-file=.env src/http/main.ts",
+    "build": "tsc",
+    "start": "node dist/http/main.js",
+    "db:push": "drizzle-kit push",
+    "seed": "tsx src/seed/seed.ts"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^10.4.0",
+    "@hono/node-server": "^1.19.14",
+    "@hono/zod-validator": "^0.8.0",
+    "@t3-oss/env-core": "^0.13.11",
+    "date-fns": "^4.2.1",
+    "dotenv": "^17.4.2",
+    "drizzle-orm": "^0.45.2",
+    "hono": "^4.12.21",
+    "mysql2": "^3.22.3",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "drizzle-kit": "^0.31.10",
+    "tsx": "^4.7.1",
+    "typescript": "^5.8.3"
+  }
+}
