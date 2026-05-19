@@ -5,7 +5,7 @@ import { or } from "./mock/or";
 
 export const mtrsSemad = () => ({
   numMtr: getRandomNumeroManifesto(),
-  data: format(faker.date.recent({ days: 30 }), "YYYY/MM/DD"),
+  data: format(faker.date.recent({ days: 30 }), "HH:mm:ss dd MM yyyy"),
   status: faker.helpers.arrayElement(["EMITIDO", "CDF", "CANCELADO"]),
   dejetos: new Array(
     faker.number.int({ min: or(1, 10, 0.15), max: or(10, 500, 0.15) }),

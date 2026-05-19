@@ -14,7 +14,7 @@ export const authRoutes = new Hono()
         orgao: "ima",
       });
       if (token === "invalid-password") {
-        return c.json({ error: "Invalid password" }, 401);
+        return c.json({ error: "invalid-password" }, 401);
       }
       return c.json({ token });
     },
@@ -29,7 +29,7 @@ export const authRoutes = new Hono()
         orgao: "semad",
       });
       if (token === "invalid-password") {
-        return c.json({ error: "Invalid password" }, 401);
+        return c.json({ error: "invalid-password" }, 401);
       }
       return c.json({ token });
     },
@@ -44,7 +44,7 @@ export const authRoutes = new Hono()
         orgao: "inea",
       });
       if (token === "invalid-password") {
-        return c.json({ error: "Invalid password" }, 401);
+        return c.json({ error: "invalid-password" }, 401);
       }
       return c.json({ token });
     },

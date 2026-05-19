@@ -6,7 +6,7 @@ import { or } from "./mock/or";
 
 export const mtrsInea = () => ({
   manifesto: getRandomNumeroManifesto(),
-  dataEmissao: format(faker.date.recent({ days: 30 }), "YYYY/MM/DD"),
+  dataEmissao: format(faker.date.recent({ days: 30 }), "yyyy/MM/dd"),
   situacao: faker.helpers.arrayElement(["EMITIDO", "CDF", "CANCELADO"]),
   listaDeResiduos: new Array(
     faker.number.int({ min: or(1, 10, 0.15), max: or(10, 500, 0.15) }),

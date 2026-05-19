@@ -8,9 +8,9 @@ import { mtrsSemad } from "../../use-cases/get-mtrs-for-cnpj/semad";
 import { mtrsInea } from "../../use-cases/get-mtrs-for-cnpj/inea";
 
 export const getMtrsForCnpjRoutes = new Hono()
-  .use(authMiddleware)
   .post(
     "/mtrs-ima",
+    authMiddleware("ima"),
     zValidator("json", z.object({ cnpj: z.string() })),
     async (c) => {
       const mtrs = await getMtrsForCnpj(c.req.valid("json").cnpj, {
@@ -24,6 +24,7 @@ export const getMtrsForCnpjRoutes = new Hono()
   )
   .post(
     "/mtrs-semad",
+    authMiddleware("semad"),
     zValidator("json", z.object({ cnpj: z.string() })),
     async (c) => {
       const mtrs = await getMtrsForCnpj(c.req.valid("json").cnpj, {
@@ -37,6 +38,7 @@ export const getMtrsForCnpjRoutes = new Hono()
   )
   .post(
     "/authenticate-inea",
+    authMiddleware("inea"),
     zValidator("json", z.object({ cnpj: z.string() })),
     async (c) => {
       const mtrs = await getMtrsForCnpj(c.req.valid("json").cnpj, {
