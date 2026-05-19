@@ -15,6 +15,12 @@ Seu trabalho é construir, em volta desse serviço, uma solução que mantenha o
    - Botão de "sincronizar agora".
    - Tela de visualização individual de um MTR.
    - Histórico de atualizações
+4. **Documento de arquitetura** (`ARCHITECTURE.md` ou equivalente, em Markdown) explicando:
+   - Visão geral da solução e diagrama (pode ser ASCII/Mermaid) dos componentes.
+   - Decisões técnicas tomadas e seus trade-offs
+   - Modelo de dados
+   - Fluxo de sincronização e como o histórico é mantido.
+   - Como rodar localmente, variáveis de ambiente e pontos de extensão para novos órgãos.
 
 Tudo deve rodar dentro do **Turborepo** já existente (workspaces pnpm configurados em [pnpm-workspace.yaml](pnpm-workspace.yaml)).
 
@@ -77,3 +83,17 @@ Serão considerados:
 - Robustez do consumo dos órgãos.
 - DX (facilidade de subir o projeto, scripts, tipagem).
 - Clareza das decisões técnicas tomadas.
+
+## Bônus — Uso de IA no desenvolvimento
+
+Na Ambisis, o uso de IA para acelerar o desenvolvimento é incentivado e bem visto. Como entregável **bônus** (não obrigatório, mas valorizado na avaliação), inclua um documento em Markdown (ex.: `AI_USAGE.md`) descrevendo como você usou IA ao longo do desafio.
+
+Sugestão de tópicos a abordar:
+
+- **Ferramentas utilizadas** (Cursor, Copilot, Claude, ChatGPT, etc.) e em quais momentos cada uma foi usada.
+- **Onde a IA ajudou de fato**
+- **Onde você escolheu não delegar para a IA** e por quê (decisões arquiteturais, revisão de código sensível, etc.).
+- **Como você manteve controle de qualidade** sobre o que a IA produziu (revisão, tipagem, testes, execução local).
+- **Exemplos concretos de prompts** ou trechos de conversa que foram particularmente úteis (opcional, mas interessante).
+
+O objetivo aqui não é "mostrar que usou IA", e sim demonstrar **maturidade no uso da ferramenta**: o quanto você consegue alavancar IA sem abrir mão das decisões técnicas e da qualidade da entrega.
