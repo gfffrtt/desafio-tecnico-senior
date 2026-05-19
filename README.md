@@ -14,6 +14,7 @@ Seu trabalho é construir, em volta desse serviço, uma solução que mantenha o
    - Lista consolidada dos MTRs (independente do órgão de origem).
    - Botão de "sincronizar agora".
    - Tela de visualização individual de um MTR.
+   - Histórico de atualizações
 
 Tudo deve rodar dentro do **Turborepo** já existente (workspaces pnpm configurados em [pnpm-workspace.yaml](pnpm-workspace.yaml)).
 
