@@ -1,10 +1,10 @@
 import { faker } from "@faker-js/faker";
-import { getRandomNumeroManifesto } from "./mock/numeros-manifesto";
+import { getRandomNumeroManifestoIma } from "./mock/numeros-manifesto";
 import { format } from "date-fns";
 import { or } from "./mock/or";
 
 export const mtrsIma = () => ({
-  codigoManifesto: getRandomNumeroManifesto(),
+  codigoManifesto: getRandomNumeroManifestoIma(),
   emissao: format(faker.date.recent({ days: 30 }), "dd-MM-yyyy"),
   status: faker.helpers.arrayElement(["EMITIDO", "CDF", "CANCELADO"]),
   residuos: new Array(
